@@ -1,11 +1,23 @@
 package com.example.administrator.myweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Administrator on 2018/4/12 0012.
  */
 
-public class City {
+public class City extends DataSupport {
     public int id;
+
+    public int getProvinceId() {
+        return provinceId;
+    }
+
+    public void setProvinceId(int provinceId) {
+        this.provinceId = provinceId;
+    }
+
+    public int provinceId;
 
     public int getId() {
         return id;

@@ -1,12 +1,24 @@
 package com.example.administrator.myweather.db;
 
+import org.litepal.crud.DataSupport;
+
 /**
  * Created by Administrator on 2018/4/12 0012.
  */
 
-public class County {
+public class County extends DataSupport{
 
     public int id;
+
+    public int getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
+    }
+
+    public int cityId;
 
     public int getId() {
         return id;
@@ -24,16 +36,18 @@ public class County {
         CountyName = countyName;
     }
 
-    public int getCountyCode() {
-        return CountyCode;
-    }
-
-    public void setCountyCode(int countyCode) {
-        CountyCode = countyCode;
-    }
 
     public String CountyName;
-    public int CountyCode;
+
+    public String getWeatherId() {
+        return weatherId;
+    }
+
+    public void setWeatherId(String weatherId) {
+        this.weatherId = weatherId;
+    }
+
+    public String weatherId;
 
 
 }
